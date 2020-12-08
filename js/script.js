@@ -1,25 +1,23 @@
 "use strict";
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+const PersonalMoviesDB = {
 
-if (4 == 9) {
-    console.log('ok!');
-} else {
-    console.log('error');
-}
+        count: numberOfFilms,
+        movies: {},
+        actors: {},
+        genres: [],
+        privet: false
 
-const numb = 50;
-
-switch(numb){
-
-    case 49:
-        console.log('Неверно!');
-        break;
-    case 100:
-        console.log('Неверно!');
-        break;
-    case 51:
-        console.log('Верно!');
-        break;
-    default:  console.log('Неверно!');
-    break;
-
-}
+};
+for (let i = 0; i < 2; i++){
+    const a = prompt('Сколько фильмов вы уже посмотрели?'),
+          b = prompt('На сколько вы его оцениваете?');
+         if (a != null && b != null && a != '' && b != '' && a.length < 50){
+            PersonalMoviesDB.movies[a] = b;
+            console.log('DONE GANDON');
+            }else {
+                console.log('WRONG UEBAK');
+                --i;
+            }
+            
+        }
