@@ -1,23 +1,29 @@
 "use strict";
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
-const PersonalMoviesDB = {
+let num = 20;
+function showFirstMessage(text){
+    console.log(text);
+    num = 10;
 
-        count: numberOfFilms,
-        movies: {},
-        actors: {},
-        genres: [],
-        privet: false
+}
+showFirstMessage('Hello world!');
+console.log(num);
 
+function calc (a , b){
+    return(a + b);    
+}
+console.log(calc(4 , 5));
+console.log(calc(5 , 7));
+console.log(calc(7 , 15));
+
+function ret(){
+    let num = 50;
+    return num;
+}
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function(){
+    console.log('Hello pizdyk')
 };
-for (let i = 0; i < 2; i++){
-    const a = prompt('Сколько фильмов вы уже посмотрели?'),
-          b = prompt('На сколько вы его оцениваете?');
-         if (a != null && b != null && a != '' && b != '' && a.length < 50){
-            PersonalMoviesDB.movies[a] = b;
-            console.log('DONE GANDON');
-            }else {
-                console.log('WRONG UEBAK');
-                --i;
-            }
-            
-        }
+logger();
+
