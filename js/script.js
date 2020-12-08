@@ -27,3 +27,7 @@ const logger = function(){
 };
 logger();
 
+const calc = (a , b) => {
+console.log('1');
+return a + b;
+};
