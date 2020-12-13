@@ -7,8 +7,12 @@ const options = {
     color:{
         border: 'black',
         bg: 'red'
+    },
+    makeTest: function(){
+    console.log('test'); 
     }
 };
+options.makeTest();
 console.log(options.name);
 
 for (let key in options){
@@ -21,3 +25,6 @@ for (let key in options){
     }
     
 }
+
+// console.log(Object.keys(options).length);
+const {border, bg} = options.colors;
